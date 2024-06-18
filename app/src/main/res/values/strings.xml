@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RestaurantApp</string>
+    <string name="dishname1"><![CDATA[Kebabs com arroz & vinagrete]]></string>
+    <string name="dishname2">Panquecas estilo Japonês</string>
+    <string name="dishname3">X-Burguer Artesanal com batata frita</string>
+    <string name="dishname4">Rámen picante com arroz e bife</string>
+    <string name="dishprice1">A partir de R$ 35,00</string>
+    <string name="dishprice2">A partir de R$ 20,00</string>
+    <string name="dishprice3">A partir de R$ 25,00</string>
+    <string name="dishprice4">A partir de R$ 40,00</string>
+</resources>
