@@ -24,6 +24,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import groovyjarjarpicocli.CommandLine.Help.Column
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +45,28 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun RestaurantApp() {
+    val layoutDirection = LocalLayoutDirection.current
+    Surface(
+        Modifier = Modifier
+            .fillMaxSize()
+            .statusBarsPadding()
+            .padding(
+                start = WindowInsets.safeDrawing.asPaddingValues()
+                    .calculateStartPadding(layoutDirection),
+                end = WindowInsets.safeDrawing.asPaddingValues()
+                    .calculateEndPadding(layoutDirection),
+            ),
+    ) {
+        Column{
+            AffirmationsList(
+                affirmationList = Datasource().loadDishes1(),
+            )
+            AffirmationsList(
+                affirmationList = Datasource().loadDishes2(),
+            )
+        }
+
+    }
 }
 
 @Preview
@@ -76,6 +99,18 @@ fun DishCard(dish: Dish, modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.labelLarge
             )
 
+        }
+    }
+}
+
+@Composable
+fun DishesList(DishesList: List<Dish>, modifier: Modifier = Modifier) {
+    LazyRow(modifier = modifier) {
+        items(DishesList) { dish ->
+            DishCard(
+                dish = dish,
+                modifier = Modifier.padding(8.dp)
+            )
         }
     }
 }
