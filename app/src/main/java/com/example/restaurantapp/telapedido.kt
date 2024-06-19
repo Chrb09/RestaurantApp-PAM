@@ -44,18 +44,10 @@ import com.example.restaurantapp.data.Datasource
 import com.example.restaurantapp.model.Dish
 import com.example.restaurantapp.ui.theme.RestaurantAppTheme
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-                AppPreview()
-        }
-    }
-}
+
 
 @Composable
-fun RestaurantApp() {
+fun aaaaaa() {
     val layoutDirection = LocalLayoutDirection.current
     Box(
         modifier = Modifier
@@ -98,23 +90,6 @@ fun RestaurantApp() {
                 ),
                 modifier = Modifier.padding(24.dp,8.dp, 16.dp, 0.dp)
             )
-
-            DishesList(
-                dishesList = Datasource().loadDishes1(),
-            )
-            Text(
-                text = stringResource(R.string.dishlist2),
-                style = TextStyle(
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = colorResource(R.color.teal_900)
-                ),
-                modifier = Modifier.padding(24.dp,16.dp, 16.dp, 0.dp)
-            )
-
-            DishesList(
-                dishesList = Datasource().loadDishes2(),
-            )
         }
 
     }
@@ -135,7 +110,7 @@ private fun AppPreview() {
 }
 
 @Composable
-fun DishCard(dish: Dish, modifier: Modifier = Modifier) {
+fun DishCarda(dish: Dish, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .background(colorResource(R.color.white))
@@ -191,7 +166,7 @@ fun DishCard(dish: Dish, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun DishesList(dishesList: List<Dish>, modifier: Modifier = Modifier) {
+fun DishesLista(dishesList: List<Dish>, modifier: Modifier = Modifier) {
     LazyRow(modifier = modifier.padding(16.dp,0.dp, 0.dp, 0.dp)) {
         items(dishesList) { dish ->
             DishCard(

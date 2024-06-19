@@ -2,7 +2,7 @@
     <string name="app_name">RestaurantApp</string>
     <string name="dishname1"><![CDATA[Kebabs com arroz & vinagrete]]></string>
     <string name="dishname2">Panquecas estilo Japonês</string>
-    <string name="dishname3">X-Burguer Artesanal com batata frita</string>
+    <string name="dishname3">X-Burguer artesanal com batata frita</string>
     <string name="dishname4">Rámen picante com arroz e bife</string>
     <string name="dishprice1">A partir de R$ 35,00</string>
     <string name="dishprice2">A partir de R$ 20,00</string>
@@ -12,4 +12,12 @@
     <string name="greeting">Bom Dia</string>
     <string name="dishlist1">Lançamentos</string>
     <string name="dishlist2">Mais Populares</string>
+    <string name="dishname5">Pão com abacate e ovos</string>
+    <string name="dishprice5">" partir de R$ 16,99"</string>
+    <string name="dishname6">Frango grelhado com molho</string>
+    <string name="dishprice6">" partir de R$ 20,00"</string>
+    <string name="dishname7">X-Ovo</string>
+    <string name="dishprice7">" partir de R$ 10,00"</string>
+    <string name="dishname8">Salada de frango</string>
+    <string name="dishprice8">" partir de R$ 15,00"</string>
 </resources>
