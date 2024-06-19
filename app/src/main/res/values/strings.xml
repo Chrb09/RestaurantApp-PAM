@@ -8,4 +8,8 @@
     <string name="dishprice2">A partir de R$ 20,00</string>
     <string name="dishprice3">A partir de R$ 25,00</string>
     <string name="dishprice4">A partir de R$ 40,00</string>
+    <string name="user_name">Carlos Henrique</string>
+    <string name="greeting">Bom Dia</string>
+    <string name="dishlist1">Lançamentos</string>
+    <string name="dishlist2">Mais Populares</string>
 </resources>
