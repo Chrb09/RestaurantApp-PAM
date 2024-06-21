@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RestaurantApp</string>
+    <string name="app_name">Restaurante</string>
     <string name="dishname1"><![CDATA[Kebabs com arroz & vinagrete]]></string>
     <string name="dishname2">Panquecas estilo Japonês</string>
     <string name="dishname3">X-Burguer artesanal com batata frita</string>
@@ -20,6 +20,10 @@
     <string name="dishprice7">"A partir de R$ 10,00"</string>
     <string name="dishname8">Salada de frango</string>
     <string name="dishprice8">"A partir de R$ 15,00"</string>
-    <string name="switchpage">Trocar Página</string>
+    <string name="cart">Carrinho</string>
     <string name="title_activity_main2">MainActivity2</string>
+    <string name="menu">Cárdapio</string>
+    <string name="dishdescription3">Descubra o sabor autêntico com nosso X-Burguer Artesanal, uma experiência gastronômica única. Feito com ingredientes frescos e de alta qualidade, garantimos um sabor incomparável.</string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="dishingredients3">Pão brioche com gergelim\nCarne 100% Angus\nQueijo cheddar artesanal\nAlface fresca\nTomate maduro\nMolho especial</string>
 </resources>

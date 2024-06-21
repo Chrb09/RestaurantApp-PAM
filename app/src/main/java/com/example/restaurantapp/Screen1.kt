@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.calculateEndPadding
@@ -20,9 +21,13 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.ShoppingCart
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -65,16 +70,25 @@ fun Screen1(navController: NavController){
         ) {
                 RestaurantApp1()
             Button(
-                modifier = Modifier.padding(24.dp,8.dp, 24.dp, 48.dp)
+                modifier = Modifier.padding(32.dp,8.dp, 32.dp, 48.dp)
                     .fillMaxWidth(),
                 onClick = {
                     navController.navigate(Routes.screen2)
                 },
+                colors = ButtonDefaults.buttonColors(containerColor = colorResource(R.color.teal_600)),
+                contentPadding = PaddingValues(0.dp,18.dp, 0.dp, 18.dp),
+                shape = RoundedCornerShape(20.dp),
             ) {
+                Icon(
+                    Icons.Rounded.ShoppingCart,
+                    contentDescription = stringResource(R.string.cart),
+                    modifier = Modifier.size(34.dp)
+                )
                 Text(
-                    text = stringResource(R.string.switchpage),
+                    modifier = Modifier.padding(24.dp,0.dp, 24.dp, 0.dp),
+                    text = stringResource(R.string.cart),
                     style = TextStyle(
-                        fontSize = 18.sp,
+                        fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
 
                         ),
@@ -88,8 +102,7 @@ fun Screen1(navController: NavController){
 
 @Composable
 fun RestaurantApp1() {
-        Column(
-        ){
+        Column{
             Text(
                 text = stringResource(R.string.greeting),
                 style = TextStyle(
@@ -176,8 +189,7 @@ fun DishCard(dish: Dish, modifier: Modifier = Modifier) {
                     contentDescription = stringResource(dish.nameResourceId),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(12.dp, 0.dp, 12.dp, 0.dp)
-                        .height(170.dp),
+                        .padding(0.dp,0.dp, 0.dp, 16.dp),
                     contentScale = ContentScale.Fit
                 )
                 Text(
